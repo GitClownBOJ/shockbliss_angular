@@ -1,0 +1,4 @@
+<div class="mobile-nav" [class.active]="isActive">
+  <button class="close-button" (click)="close()">&times;</button>
+  <a *ngFor="let item of navItems" [href]="item.href">{{ item.text }}</a>
+</div>

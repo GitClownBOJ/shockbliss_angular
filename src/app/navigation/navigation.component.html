@@ -1,0 +1,8 @@
+<div class="button-column">
+  <a *ngFor="let item of navItems" 
+     [href]="item.href" 
+     class="button" 
+     [ngClass]="item.class">
+    <span class="button-text">{{ item.text }}</span>
+  </a>
+</div>
