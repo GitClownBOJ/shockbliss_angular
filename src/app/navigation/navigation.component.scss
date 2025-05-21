@@ -26,6 +26,13 @@
   left: 85%;
   top: 33%;
 }
+
+@media (max-width: 767px) {
+  .button-column {
+    display: none; // This will hide the entire column
+  }
+}
+
 .button:nth-child(1) {
   top: 0;
 }
