@@ -71,10 +71,10 @@ main {
   img[src="static.gif"] {
     position: absolute;
     /* You'll need to fine-tune these values to perfectly overlay your TV screen */
-    left: 8%; /* Adjust this percentage or pixel value */
+    left: 9%; /* Adjust this percentage or pixel value */
     top: 51%;  /* Adjust this percentage or pixel value */
-    width: 560px; /* Adjust this percentage or pixel value */
-    height: 560px; /* Adjust this percentage or pixel value */
+    width: 65%; /* Adjust this percentage or pixel value */
+    height: auto; /* Adjust this percentage or pixel value */
     overflow: hidden;
     object-fit: cover;
     display: block;
