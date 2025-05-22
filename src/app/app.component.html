@@ -5,7 +5,9 @@
 
   <img src="static.gif" alt="Static screen" class="static-screen-gif">
 
-  <app-hamburger-menu></app-hamburger-menu>
+  <div class="hamburger-menu-column">
+  <app-hamburger-menu (menuToggled)="onMenuToggle($event)"></app-hamburger-menu>
+  </div>
   <app-navigation></app-navigation>
   <app-mobile-nav></app-mobile-nav>
 </div>

@@ -14,4 +14,13 @@ import { GifOverlayComponent } from './gif-overlay/gif-overlay.component';
 })
 export class AppComponent {
   title = 'ShockBliss';
+
+  onMenuToggle(isOpen: boolean) {
+    console.log('Hamburger menu is now:', isOpen ? 'open' : 'closed');
+    // You can add logic here to control other parts of your app based on the menu state.
+    // For example, you might want to:
+    // - Toggle the visibility of a side navigation menu (e.g., MobileNavComponent)
+    // - Add/remove a CSS class to the body to prevent scrolling when the menu is open
+    // - Perform analytics or other actions
+  }
 }

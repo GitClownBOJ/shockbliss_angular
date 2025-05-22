@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { NavigationService } from '../services/navigation.service';
 import { CommonModule } from '@angular/common'; // Important for *ngFor, NgClass etc.
 import { RouterModule } from '@angular/router'; // Important for routerLink
@@ -14,9 +14,15 @@ import { RouterModule } from '@angular/router'; // Important for routerLink
   styleUrls: ['./hamburger-menu.component.scss']
 })
 export class HamburgerMenuComponent {
+
+	isOpen: boolean = false;
+	@Output() menuToggled = new EventEmitter<boolean>();
+
 	constructor(private navService: NavigationService) {}
 
-	toggleMobileNav(): void {
+	toggleMenu(): void {
+		this.isOpen = !this.isOpen;
+		this.menuToggled.emit(this.isOpen);
 		this.navService.toggleMobileNav();
 	}
 }
