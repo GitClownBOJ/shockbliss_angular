@@ -2,6 +2,7 @@ import { Component, Output, EventEmitter } from '@angular/core';
 import { NavigationService } from '../services/navigation.service';
 import { CommonModule } from '@angular/common'; // Important for *ngFor, NgClass etc.
 import { RouterModule } from '@angular/router'; // Important for routerLink
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-hamburger-menu',
@@ -18,7 +19,14 @@ export class HamburgerMenuComponent {
 	isOpen: boolean = false;
 	@Output() menuToggled = new EventEmitter<boolean>();
 
-	constructor(private navService: NavigationService) {}
+	 constructor(
+        private navService: NavigationService,
+        private router: Router
+    ) {}
+
+	  get isShopRoute(): boolean {
+    return this.router.url === '/shop';
+  }
 
 	toggleMenu(): void {
 		this.isOpen = !this.isOpen;
