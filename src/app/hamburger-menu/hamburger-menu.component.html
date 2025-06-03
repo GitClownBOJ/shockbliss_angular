@@ -1,4 +1,11 @@
-<div class="hamburger" [ngClass]="{'open': isOpen, 'closed': !isOpen}" (click)="toggleMenu()">
+<div class="hamburger" 
+     [ngClass]="{
+       'open': isOpen, 
+       'closed': !isOpen,
+       'shop-style': isShopRoute,
+       'default-style': !isShopRoute
+     }" 
+     (click)="toggleMenu()">
   <div class="burger-main">
     <div class="burger-inner">
       <span class="top"></span>
