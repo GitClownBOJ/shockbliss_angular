@@ -337,6 +337,16 @@ main {
     width: 10%;
     height:auto;
   }
+
+    .shop-menu-position {
+  // Styles for when the route is /shop
+  // For example, to move it to the top-left:
+  top: 10%;
+  left: 81%;
+  right: auto; // Important to unset 'right' if you're using 'left'
+  // Add any other specific positioning styles you need for the /shop route
+}
+
   
   .button-column {
     display: none;
