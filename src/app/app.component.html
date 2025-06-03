@@ -5,7 +5,8 @@
 
   <img src="static.gif" alt="Static screen" class="static-screen-gif">
 
-  <div class="hamburger-menu-column">
+  <div class="hamburger-menu-column"
+    [ngClass]="{ 'shop-menu-position': isShopRoute }">
   <app-hamburger-menu (menuToggled)="onMenuToggle($event)"></app-hamburger-menu>
   </div>
   <app-navigation></app-navigation>
