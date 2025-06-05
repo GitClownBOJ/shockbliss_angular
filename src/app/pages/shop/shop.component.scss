@@ -251,6 +251,9 @@ body {
 
 @media (max-width: 768px) {
   :host {
-    padding-top: 100px; /* Adjust this value based on your logo's height */
+    padding-top: 100px;
   }
+  .shop-description {
+  margin-top: 3rem;
+}
 }
