@@ -1,0 +1,13 @@
+<nav class="sidebar" 
+     [class.active]="isActive"
+     [class.non-root-page]="!isRootPage"
+     >
+  <div class="nav-menu">
+    <a *ngFor="let item of navItems" 
+       [href]="item.href"
+       [class.current-route]="isCurrentRoute(item.href ?? '')"
+       class="nav-item">
+      {{ item.text }}
+    </a>
+  </div>
+</nav>
