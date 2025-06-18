@@ -1,5 +1,6 @@
 cat > .gitignore << 'EOL'
 # Dependencies
+frontend/node_modules/
 /node_modules
 /bower_components
 
