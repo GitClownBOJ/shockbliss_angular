@@ -1,5 +1,8 @@
+$font-primary: 'Roboto', "Helvetica Neue", sans-serif;
+$font-accent: 'Righteous', cursive;
+
 body {
-  font-family: "Righteous", sans-serif;
+  font-family: $font-accent;
   font-weight: 400;
   font-style: normal;
   background-color: #000;
@@ -10,32 +13,69 @@ body {
 }
 
 /* Typography */
+
+h1, h2, h3, h4, h5, h6 {
+  /* Applying the accent font using a Sass variable */
+  font-family: $font-accent;
+}
+
 h1 {
   margin: 0;
   font-size: 48px;
   font-weight: bold;
-  color: transparent;
-  background-image: linear-gradient(
-    45deg,
-    #996515 0%,      /* Deeper, richer gold start */
-    #FFC125 20%,      /* Vibrant gold */
-    #FFD700 35%,      /* Classic bright gold */
-    #FFBF00 50%,      /* Amber gold - more saturated */
-    #FFD700 65%,      /* Classic bright gold again */
-    #FFC125 80%,      /* Vibrant gold again */
-    #996515 100%     /* Deeper, richer gold end */
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  background-size: 200% auto;
-  animation: shine 2s linear infinite;
-  text-shadow: 3px 3px 6px rgba(70, 70, 70, 0.6);
+  color: #E6AF4B;
 }
 
 h2 {
   font-size: 2em;
   margin: 0 0 10px 0;
   color: #E6AF4B;
+}
+
+.custom-info-box .mat-mdc-menu-panel {
+  background-color: #333;
+  border-radius: 8px;
+  /* Removes the default Angular Material box-shadow if you want a flatter look */
+  box-shadow: none;
+}
+
+/* Targets the inner content wrapper to add padding */
+.custom-info-box .mat-mdc-menu-content {
+  padding: 1rem;
+}
+
+/* Styles the content inside your custom div */
+.custom-info-box .info-bubble-content {
+  color: #ffffff;
+}
+
+.custom-info-box .info-bubble-content h4 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.custom-info-box .info-bubble-content p {
+  margin: 0;
+  padding: 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.custom-info-box .info-bubble-content p:not(:last-child) {
+   margin-bottom: 0.25rem;
+}
+
+.mat-mdc-menu-content {
+  min-width: 150px !important;
+  padding: 20px !important;
+    color: #ffffff !important;
+    font-family: 'Inter', sans-serif !important;
+     font-size: 14px !important;
+  font-weight: 400 !important;
+  line-height: 1.5 !important;
+  letter-spacing: 0.25px !important;
 }
 
 /* Animations */
@@ -74,6 +114,3 @@ h2 {
     overflow: hidden;
   }
 }
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
