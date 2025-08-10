@@ -5,6 +5,7 @@ frontend/node_modules/
 /bower_components
 
 # Compiled output
+frontend/.angular/
 /dist
 /tmp
 /out-tsc
