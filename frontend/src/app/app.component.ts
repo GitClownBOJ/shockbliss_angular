@@ -6,8 +6,6 @@ import { CommonModule } from '@angular/common';
 import { HamburgerMenuComponent } from './hamburger-menu/hamburger-menu.component'; // Import your UI components
 import { NavigationComponent } from './navigation/navigation.component';
 import { MobileNavComponent } from './mobile-nav/mobile-nav.component';
-import { GifOverlayComponent } from './gif-overlay/gif-overlay.component';
-
 
 @Component({
   selector: 'app-root',
