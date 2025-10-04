@@ -1,1 +1,35 @@
-<p>contact works!</p>
+
+<app-sidebar></app-sidebar>
+<div class="black-shiny-header"></div>
+<div class="shop-description text-center mt-4">
+  <h1>Your Next Adventure Starts Here!</h1>
+  <p class="lead">Explore our collection of handmade, practical, and truly unique vests, designed to be your reliable companion for any journey.
+  <br>
+  <br>Want to add a personal touch? Check out our Shockbliss prints! Choose from 5x10cm stickers or have them custom applied to almost anything you can imagine.</p>
+</div>
+  <h1 class="page-title">Who we are</h1>
+
+  <div class="founders-grid">
+    <div class="founder-card" *ngFor="let f of founders">
+      <h3 class="founder-title">{{ f.title }}</h3>
+
+      <div class="founder-image-wrap">
+        <img [src]="f.image" [alt]="f.name" class="founder-image" />
+      </div>
+
+      <div class="info-box">
+        <h4 class="founder-name">{{ f.name }}</h4>
+        <p class="founder-bio">{{ f.bio }}</p>
+
+        <div class="contact-info">
+          <a class="email" href="mailto:{{ f.email }}">{{ f.email }}</a>
+          <div class="phone">{{ f.phone }}</div>
+        </div>
+      </div>
+    </div>
+
+  <section class="contact-form-placeholder">
+    <h2>Contact us</h2>
+    <!-- Contact form will be implemented here -->
+  </section>
+</div>

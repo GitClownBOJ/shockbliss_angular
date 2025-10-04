@@ -20,14 +20,16 @@ export class AppComponent {
 
   constructor(private router: Router) {}
 
-  ngOnInit() {
-    // Subscribe to router events to update isShopRoute
-    this.router.events.pipe(
-      filter(event => event instanceof NavigationEnd)
-    ).subscribe((event: NavigationEnd) => {
-      this.isShopRoute = event.urlAfterRedirects === '/shop';
-    });
-  }
+ ngOnInit() {
+  this.isShopRoute = this.router.url === '/shop' || this.router.url === '/contact';
+
+  this.router.events.pipe(
+    filter(event => event instanceof NavigationEnd)
+  ).subscribe((event: NavigationEnd) => {
+    const url = (event as NavigationEnd).urlAfterRedirects;
+    this.isShopRoute = url === '/shop' || url === '/contact';
+  });
+}
 
 
   onMenuToggle(isOpen: boolean) {

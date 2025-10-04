@@ -47,6 +47,14 @@ p {
   color: #7f8c8d;
 }
 
+.info-bubble-content p {
+  margin: 0;
+  padding: 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.8);
+}
+
 .shop-description {
   margin: 2rem auto 3rem auto;
   padding: 2rem;
@@ -114,17 +122,17 @@ p {
     transform-origin: center;
 
     &:nth-child(1) {
-      background: #FDD94F;
+      background: #000000;
       transform: rotateY(0) translateZ(35vw);
     }
 
     &:nth-child(2) {
-      background: #F87949;
+      background: #000000;
       transform: rotateY(120deg) translateZ(35vw);
     }
 
     &:nth-child(3) {
-      background: #FBAB48;
+      background: #000000;
       transform: rotateY(240deg) translateZ(35vw);
     }
   }

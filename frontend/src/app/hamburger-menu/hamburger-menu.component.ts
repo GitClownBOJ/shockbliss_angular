@@ -24,9 +24,11 @@ export class HamburgerMenuComponent {
         private router: Router
     ) {}
 
-	  get isShopRoute(): boolean {
-    return this.router.url === '/shop';
-  }
+get isShopRoute(): boolean {
+  const path = this.router.url.split('?')[0].split('#')[0];
+  return path === '/shop' || path === '/contact';
+}
+
 
 	toggleMenu(): void {
 		this.isOpen = !this.isOpen;
