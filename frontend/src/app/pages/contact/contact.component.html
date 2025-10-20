@@ -2,10 +2,10 @@
 <app-sidebar></app-sidebar>
 <div class="black-shiny-header"></div>
 <div class="shop-description text-center mt-4">
-  <h1>Your Next Adventure Starts Here!</h1>
-  <p class="lead">Explore our collection of handmade, practical, and truly unique vests, designed to be your reliable companion for any journey.
+  <h1>Get to know the shockbliss team</h1>
+  <p>We are a sister duo dedicated to bringing you the most shockingly interesting art meets tech -solutions. Our mission is to make your life more organized and blissed.</p>
   <br>
-  <br>Want to add a personal touch? Check out our Shockbliss prints! Choose from 5x10cm stickers or have them custom applied to almost anything you can imagine.</p>
+  
 </div>
   <h1 class="page-title">Who we are</h1>
 
@@ -28,8 +28,6 @@
       </div>
     </div>
 
-  <section class="contact-form-placeholder">
-    <h2>Contact us</h2>
-    <!-- Contact form will be implemented here -->
-  </section>
-</div>
+</div> <app-contact-form
+[formTitle]="'Ota yhteyttä tiimiin'"
+  (formSubmitted)="handleFormSubmit($event)"></app-contact-form>

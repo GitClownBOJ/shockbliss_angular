@@ -1,0 +1,106 @@
+// Voit muokata näitä värejä helposti
+:host {
+  --primary-glow: #9f00ff;   // Pääväri (violetti)
+  --secondary-glow: #00f0ff; // Korostusväri (syaani)
+  --background-color: rgba(10, 10, 25, 0.75);
+  --font-color: #e0e0e0;
+}
+
+.cyber-form-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  background: var(--background-color);
+  border: 1px solid var(--primary-glow);
+  border-radius: 8px;
+  box-shadow: 
+    0 0 5px var(--primary-glow),
+    0 0 15px var(--primary-glow),
+    inset 0 0 5px rgba(159, 0, 255, 0.5);
+  
+  // Lasimainen tausta
+  backdrop-filter: blur(10px);
+
+  // Animaatio hiiren siirtyessä päälle
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+// Leijuva efekti
+.cyber-form-container:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 
+    0 0 10px var(--primary-glow),
+    0 0 30px var(--primary-glow),
+    0 0 50px var(--secondary-glow),
+    inset 0 0 10px rgba(159, 0, 255, 0.5);
+}
+
+.form-title {
+  text-align: center;
+  color: var(--font-color);
+  font-family: 'Orbitron', sans-serif; // Suositeltu cyberpunk-fontti, lisää linkki index.html-sivulle
+  text-shadow: 0 0 5px var(--secondary-glow);
+  margin-bottom: 25px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  color: var(--font-color);
+  margin-bottom: 8px;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: none;
+  border-bottom: 1px solid #555;
+  color: var(--font-color);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1em;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-bottom-color: var(--secondary-glow);
+  box-shadow: 0 5px 15px -5px var(--secondary-glow);
+}
+
+.cyber-button {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid var(--primary-glow);
+  border-radius: 4px;
+  background-color: transparent;
+  color: var(--font-color);
+  font-size: 1.1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, text-shadow 0.3s;
+  text-shadow: 0 0 5px var(--primary-glow);
+}
+
+.cyber-button:hover:not(:disabled) {
+  background-color: var(--primary-glow);
+  color: #000;
+  text-shadow: none;
+}
+
+.cyber-button:disabled {
+  border-color: #555;
+  color: #555;
+  cursor: not-allowed;
+  text-shadow: none;
+}

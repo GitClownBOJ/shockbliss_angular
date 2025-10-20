@@ -58,7 +58,7 @@ p {
 .shop-description {
   margin: 2rem auto 3rem auto;
   padding: 2rem;
-  max-width: 800px;
+  max-width: 600px;
   border: 2px solid rgba(255, 255, 255, 0.2);
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.05);
@@ -162,24 +162,43 @@ p {
             margin: 0 auto;
         }
 
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-            margin-bottom: 40px;
-            overflow: hidden;
-            contain: layout style;
-            background: black;
-        }
+  .products-grid {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0px;
+    margin-bottom: 20px;
+    contain: layout style;
+    background: black;
+    width: 100%;
+    flex-wrap: wrap; // Allow wrapping for multiple items
+}
 
-        .product-card {
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
-            overflow: hidden;
-            transition: all 0.3s ease;
-            position: relative;
-        }
+.product-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    position: relative;
+    flex: 1 1 auto; // Allow it to grow and shrink
+    min-width: 500px; // Minimum width for readability
+    width: 100%; // Take full width available
+}
+
+.product-card:only-child {
+    flex-basis: 100%; // Wide showcase width
+    max-width: 1400px; // Allow it to be prominent
+    flex-shrink: 1; // Allow it to shrink on smaller screens
+    width: 90%;
+}
+
+// Alternative: If you want multiple cards to have consistent width
+.products-grid:not(:has(.product-card:only-child)) .product-card {
+    flex-basis: calc(33.333% - 16px); // Three columns with gap
+    max-width: 400px;
+}
+
 
         .product-image {
             position: relative;
@@ -410,7 +429,7 @@ body {
   margin-top: 3rem;
 }
 .products-grid {
-                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
                 gap: 16px;
             }
             
@@ -421,4 +440,25 @@ body {
             .page-title {
                 font-size: 2rem;
             }
+           .product-card:only-child {
+        flex-basis: 100%; // Full width on mobile
+        width: 100%;
+        margin: 0 16px;
+        min-width: auto; // Remove min-width constraint
+    }
+    
+    .products-grid:not(:has(.product-card:only-child)) .product-card {
+        flex-basis: 100%; // Single column on mobile
+        width: 90%;
+    }
+
+    .add-to-cart-btn {
+        padding: 10px 16px;
+        font-size: 0.85rem;
+    }
+
+    .product-price {
+        font-size: 1.3rem;
+    }
+
 }

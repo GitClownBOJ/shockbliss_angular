@@ -50,22 +50,6 @@ export class ShopComponent implements OnInit {
         price: 199.00,
         imageUrl: '',
         category: 'Handmade Gear'
-      },
-      {
-        id: 2,
-        name: 'Shockbliss Sticker 5x10 cm',
-        description: 'From mystical maid collection.',
-        price: 10.00,
-        imageUrl: '',
-        category: 'Stickers'
-      },
-      {
-        id: 3,
-        name: 'Abstract Sticker According to Your Wish',
-        description: 'Durable UV print',
-        price: 20.00,
-        imageUrl: '',
-        category: 'Custom Stickers'
       }
     ];
   }

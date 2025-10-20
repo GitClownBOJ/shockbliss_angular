@@ -5,6 +5,7 @@ import { CommonModule, CurrencyPipe } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
+import { ContactFormComponent } from '../../contact-form/contact-form.component';
 
 @Component({
   selector: 'app-contact',
@@ -15,6 +16,7 @@ import { filter } from 'rxjs/operators';
     CurrencyPipe,
     NavigationComponent,
     RouterLink
+    ,ContactFormComponent
   ],
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
@@ -58,6 +60,15 @@ export class ContactComponent implements OnInit{
 
   onMenuToggle(isOpen: boolean) {
     console.log('Hamburger menu is now:', isOpen ? 'open' : 'closed');
+  }
+
+  handleFormSubmit(formData: any): void {
+    console.log('Vanhempi komponentti vastaanotti datan:', formData);
+    
+    // Tässä voit tehdä datalla mitä haluat:
+    // - Lähettää sen backend-palveluun
+    // - Näyttää käyttäjälle "Kiitos viestistä" -ilmoituksen
+    alert(`Kiitos viestistäsi, ${formData.name}!`);
   }
 
 
