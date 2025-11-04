@@ -29,7 +29,7 @@ export class ContactComponent implements OnInit{
     {
       name: 'Inka Parviainen',
       title: 'Tech Wizard',
-      image: 'portrait1.jpg',
+      image: 'portrait1.webp',
       bio: `Inka designs creative user experiences and manages all IT. Passionate about making memorable products.`,
       email: 'inka@bittiviidakon.fi',
       phone: '+358 45 78314113'
@@ -64,13 +64,6 @@ export class ContactComponent implements OnInit{
 
   handleFormSubmit(formData: any): void {
     console.log('Vanhempi komponentti vastaanotti datan:', formData);
-    
-    // Tässä voit tehdä datalla mitä haluat:
-    // - Lähettää sen backend-palveluun
-    // - Näyttää käyttäjälle "Kiitos viestistä" -ilmoituksen
     alert(`Kiitos viestistäsi, ${formData.name}!`);
   }
-
-
-  // ...existing code...
 }
