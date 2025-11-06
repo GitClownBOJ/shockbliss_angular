@@ -181,19 +181,18 @@ p {
     overflow: hidden;
     transition: all 0.3s ease;
     position: relative;
-    flex: 1 1 auto; // Allow it to grow and shrink
-    min-width: 500px; // Minimum width for readability
-    width: 100%; // Take full width available
+    flex: 1 1 auto; 
+    min-width: 500px; 
+    width: 100%; 
 }
 
 .product-card:only-child {
-    flex-basis: 100%; // Wide showcase width
-    max-width: 1400px; // Allow it to be prominent
-    flex-shrink: 1; // Allow it to shrink on smaller screens
+    flex-basis: 100%; 
+    max-width: 1400px; 
+    flex-shrink: 1; 
     width: 90%;
 }
 
-// Alternative: If you want multiple cards to have consistent width
 .products-grid:not(:has(.product-card:only-child)) .product-card {
     flex-basis: calc(33.333% - 16px); // Three columns with gap
     max-width: 400px;
@@ -202,7 +201,7 @@ p {
 
         .product-image {
             position: relative;
-            height: 200px;
+            height: 800px;
             background: black;
             display: flex;
             align-items: center;

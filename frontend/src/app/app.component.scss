@@ -15,7 +15,7 @@
   width: 100px; 
 }
 
-/* Navigation Styles */
+
 nav {
   ul {
     list-style: none;
@@ -40,12 +40,12 @@ nav {
   }
 }
 
-/* Main Content Styling */
+
 main {
   padding: 20px;
 }
 
-/* Intro Section Styling */
+
 .intro {
   margin: 20px auto;
   text-align: center;
@@ -64,22 +64,21 @@ main {
   img {
     max-width: 100%;
     height: auto;
-    object-fit: contain; /* Or object-fit: cover; depending on your preference */ 
+    object-fit: contain;  
     align-items: center;
   }
   
   img[src="shockbliss.gif"] {
     position: absolute;
-    /* You'll need to fine-tune these values to perfectly overlay your TV screen */
-    left: 9.5%; /* Adjust this percentage or pixel value */
-    top: 51%;  /* Adjust this percentage or pixel value */
-    width: 65%; /* Adjust this percentage or pixel value */
-    height: auto; /* Adjust this percentage or pixel value */
+
+    left: 9.5%;
+    top: 51%;
+    width: 65%;
+    height: auto;
     overflow: hidden;
     object-fit: cover;
     display: block;
-    /* background-color: rgba(0, 255, 0, 0.3); /* Optional: For debugging positioning */
-  }
+    }
   /* ------------------------------------- */
 
 }
@@ -97,13 +96,13 @@ main {
 /* Image Overlay */
 .image-overlay {
   position: absolute;
-  top: 10%; /* Center vertically */
-  left: 10%; /* Center horizontally */
+  top: 10%; 
+  left: 10%; 
   width: 400px;
-  height: 300px; /* Adjust height as needed */
+  height: 300px;
   background-size: cover;
   background-repeat: no-repeat;
-  opacity: 0.5; /* Adjust opacity for desired visibility */
+  opacity: 0.5; 
 }
 
 /* Button Styles */
@@ -265,7 +264,7 @@ main {
   }
 }
 
-/* Bubble Image Styles */
+
 .bubble-image {
   &-container {
     float: left;
@@ -284,7 +283,6 @@ main {
   }
 }
 
-/* Media Queries */
 @media (max-width: 768px) {
   .hamburger-menu {
     display: block;
@@ -340,11 +338,10 @@ main {
 
     .shop-menu-position {
   // Styles for when the route is /shop
-  // For example, to move it to the top-left:
+  
   top: 10%;
   left: 81%;
-  right: auto; // Important to unset 'right' if you're using 'left'
-  // Add any other specific positioning styles you need for the /shop route
+  right: auto; 
 }
 
   

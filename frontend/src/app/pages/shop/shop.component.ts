@@ -47,7 +47,7 @@ export class ShopComponent implements OnInit {
         id: 1,
         name: 'Aninka Action Vest',
         description: 'Anywhere you go.',
-        price: 199.00,
+        price: 299.00,
         imageUrl: '',
         category: 'Handmade Gear'
       }

@@ -27,7 +27,7 @@
     <div *ngFor="let product of products" class="product-card">
 
       <div class="product-image">
-        <img *ngIf="product.imageUrl" [src]="product.imageUrl" [alt]="product.name">
+        <img [src]="product.imageUrl || 'de.webp'" [alt]="product.name">
       </div>
 
       <div class="product-info">
